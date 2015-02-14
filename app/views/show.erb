@@ -1,0 +1,17 @@
+<dl>
+  <dt>Title:</dt>
+  <dd><%= @entry.title %></dd>
+  <dt>Author:</dt>
+  <dd><%= @entry.author %></dd>
+  <dt>Created At:</dt>
+  <dd><%= @entry.created_at %></dd>
+  <dt>Contents:</dt>
+  <dd><%= @entry.body %></dd>
+  <dt>Tags:</dt>
+  <% @entry.tags.each do |tag| %>
+  <dd><%= tag.name %></dd>
+  <% end %>
+</dl>
+
+<a href="/entries/<%= @entry.id %>/edit">Edit Entry</a>
+

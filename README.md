@@ -1,0 +1,1 @@
+Sample MVC pattern blog build with Sinatra, ActiveRecord and Postgres Database

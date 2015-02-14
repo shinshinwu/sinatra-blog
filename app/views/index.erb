@@ -1,0 +1,11 @@
+<ul>
+  <% @entries.each do |entry| %>
+  <li><a href="/entries/<%= entry.id %>"><%= entry.title %></a>
+    <form action="/entries/" <%= entry.id %> method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Delete">
+    </form></li>
+  <% end %>
+</ul>
+
+<a href="/entries/new">Add New Blog Entry!</a>

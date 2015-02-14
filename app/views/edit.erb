@@ -1,0 +1,25 @@
+<h3>Edit New Entry</h3>
+
+<form action="/entries/<%= @entry.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <label for="title">Title:</label>
+  <input type="text" name="entry[title]" value="<%= @entry.title %>" />
+  <br>
+  <br>
+  <label for="author">Author:</label>
+  <input type="integer" name="entry[author]" value="<%= @entry.author %>" />
+  <br>
+  <br>
+  <label for="body">Body:</label>
+  <input type="text" name="entry[body]" value="<%= @entry.body %>" />
+  <br>
+  <br>
+  <label for="tags">Tags:</label>
+  <% @entry.tags.each do |tag| %>
+  <input type="text" name="tags" value="<%= tag.name %>" />
+  <% end %>
+  <br>
+  <br>
+  <br>
+  <input type="submit" value="Update Entry">
+</form>

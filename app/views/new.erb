@@ -1,0 +1,22 @@
+<h3>Add New Entry</h3>
+
+<form action="/entries" method="post">
+  <label for="title">Title:</label>
+  <input type="text" name="entry[title]" value="Title" />
+  <br>
+  <br>
+  <label for="author">Author:</label>
+  <input type="integer" name="entry[author]" value="Your Name.." />
+  <br>
+  <br>
+  <label for="body">Body:</label>
+  <input type="text" name="entry[body]" value="Add some awesome contents..." />
+  <br>
+  <br>
+  <label for="tags">Tags:</label>
+  <input type="text" name="tags" value="Add some tags seperated by space" />
+  <br>
+  <br>
+  <br>
+  <input type="submit" value="Post Entry">
+</form>
